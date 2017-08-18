@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="is">
+<head>
+	<meta charset="utf-8">
+	<title>HROS 2</title>
+	<link rel="stylesheet" href="hros2.css">
+	<script src='https://code.jquery.com/jquery-latest.min.js' type='text/javascript'></script>
+	<script src='hros2.js' type='text/javascript'></script>
+</head>
+
+<body>
+	<h1>Endurbætt HROS beiðni - <u>ATH virkar ekki á Internet Explorer</u></h1>
+	<div id="Outer">
+		<div id="SelectDepartment">
+			<input type="radio" name="Dept" value="LD"><label>Legudeild</label>
+			<input type="radio" name="Dept" value="BMT"><label>Bráðamóttaka</label>
+			<input type="radio" name="Dept" value="GDDD"><label>Göngudeild/dagdeild</label>
+			<input type="radio" name="Dept" value="HG"><label>Heilsugæsla</label>
+		</div>
+		<div id="Hros20">
+			<h1>Jón Jónsson 111111-1119</h1>
+			<button id="butVista">Vista</button>
+			<button id="butPanta">Panta</button>
+			<div id="Options">
+				<div id="optOptions">
+					<span id="optAcute" title="Sýni verður unnið og svarað <1klst"><input type="checkbox"><label>Bráð úrvinnsla</label></span>
+					<span id="optAmbulant" title="Sjúklingur mætir sjálfur í sýnatöku á rannsóknarstofu eða heilsugæslu"><input type="checkbox"><label>Ambulant</label></span>
+				</div>
+				<div>
+					<input id="dtDate" type="date">
+					<input id="dtTime" type="time">
+					<button id="butFixTime">08/11</button>
+				</div>
+				<div>
+					<input id="MessageCPOE" type="text" placeholder="skilaboð í fyrirmælum" />
+					<input id="MessageFlex" type="text" placeholder="skilaboð til Lífeindafræðings" />
+				</div>
+			</div>
+		</div>
+		<div id="iAmbulant" class="Info">Sjúklingur mætir sjálfur í sýnatöku á rannsóknarstofu eða heilsugæslu. <i>Beiðandi læknir ber sjálfur ábyrgð á niðurstöðu rannsóknar - nema um annað hafi verið samið</i></div>
+		<div id="iFixed" class="Info">Lífeindafræðingar mæta á deild á föstum tímum (08:00/11:00) og taka sýni</div>
+		<div id="iNotFixed" class="Info">Starfsfólk deildar (læknir/hjúkrunarfræðingur) taka sýni og Senda beiðni þegar tilbúið.</div>
+		<div id="iAcute" class="Info">Sýni verður unnið og svarað innan við 1klst</div>
+		<div id="CPOE">
+			<span id="CPOE_Status"></span>
+			<span id="CPOE_dtOrdered"></span>
+			<span id="CPOE_Staff1"></span>
+			<span id="CPOE_Staff2">---</span>
+			<span id="CPOE_HROS"></span>
+			<span id="CPOE_Freetext"></span>
+		</div>
+	</div>
+	<ul id="infoHUT"></ul>
+</body>
+</html>

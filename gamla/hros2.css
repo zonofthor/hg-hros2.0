@@ -1,0 +1,99 @@
+html
+{
+	background:#ddd;
+	font-size:14px;
+}
+h1 {font-size:1.2em; margin-bottom:0.2em;}
+
+#Outer
+{
+	margin:0 auto;
+	width:600px;
+}
+#SelectDepartment
+{
+	text-align:center;
+	background: rgba(131, 195, 255, 0.19);
+}
+
+#Hros20
+{
+	display:none;
+	background: #eee;
+	border: 1px solid #bbb;
+	padding:0.2em;
+}
+#Hros20.acute {background: #f99;}
+
+#dtTime {transition:background 300ms;}
+#Hros20.fixed #dtTime {background:#cff;}
+#Hros20.notfixed #dtTime {background:#ffa;}
+#Hros20.ambulant #dtTime {background:#999; color:#aaa;}
+
+#butFixTime {opacity:0; transition:opacity 250ms;}
+#Hros20.notfixed #butFixTime {opacity:1;}
+
+#MessageFlex,
+#MessageCPOE {width:22em;}
+#Hros20.acute #MessageFlex {display:none;}
+#Hros20.acute.fixed #MessageFlex {display:inherit;}
+#Hros20.notfixed #MessageFlex {display:none;}
+#Hros20.fixed #MessageCPOE {display:none;}
+#Hros20.ambulant #MessageCPOE {display:none;}
+
+.Info
+{
+	background: rgba(255, 212, 35, 0.89);
+	color:#353;
+	font-size:0.95em;
+	margin-top:0.3em;
+	padding:0.1em 0.4em;
+	border:1px solid #faa;
+	border-radius: 12px;
+}
+#iAcute,
+#iFixed,
+#iNotFixed,
+#iAmbulant {display:none;}
+#Hros20.acute ~ #iAcute {display:block;}
+#Hros20.fixed ~ #iFixed {display:block;}
+#Hros20.notfixed ~ #iNotFixed {display:block;}
+#Hros20.ambulant ~ #iAmbulant {display:block;}
+
+#butVista,
+#butPanta {display:none; float:right;}
+#Hros20.notfixed #butVista {display:inherit;}
+#Hros20.fixed #butPanta {display:inherit;}
+#Hros20.ambulant #butVista {display:inherit;}
+
+
+@-webkit-keyframes flasher
+{
+	50% {background-color:#ffb100;}
+}
+.blikkar
+{
+	-webkit-animation-name: flasher;
+	-webkit-animation-duration: 250ms;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-out;
+}
+
+
+#CPOE
+{
+	background:white;
+	margin-top:1.5em;
+	text-align:left;
+	font-size:1.1em;
+	display:none;
+}
+#CPOE>span {padding:2px; margin-right:0px;}
+#CPOE_Status {background:silver;}
+#CPOE_Status.ounnid {background:red; color:white;}
+#CPOE_Status.ivinnslu {background:#FFCD38;}
+#CPOE_dtOrdered {background:#FFCD38}
+#CPOE_HROS {background:#FFCD38;}
+#CPOE_Staff1 {background:#6495ED;}
+#CPOE_Staff2 {background:green}
+#CPOE_Freetext {background:#fff; font-size:0.90em; display:inline-block; min-width:8em; text-align: left}
